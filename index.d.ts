@@ -82,7 +82,7 @@ declare module 'function-plot' {
     tip?: Tip,
   };
 
-  type Chart = {
+  export type Chart = {
     id: string,
     linkedGraphs: [Chart],
     markerId: string,
