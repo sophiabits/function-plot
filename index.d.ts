@@ -1,4 +1,3 @@
-// TODO parametric / polar / implicit / points / vector fnType
 // TODO type Options.plugins -- an array of functions which take the chart as a param?
 
 declare module 'function-plot' {
@@ -23,6 +22,8 @@ declare module 'function-plot' {
 
   type Datum = {
     fn: Fn,
+    // TODO: parametric / polar / implicit / points / vector fnType
+    fnType?: 'linear' | 'linear-y',
     /** If true, this function will be rendered as an area graph. */
     closed?: boolean,
     color?: string,
@@ -115,4 +116,12 @@ declare module 'function-plot' {
 
   const functionPlot: (config: Options) => Chart;
   export default functionPlot;
+
+  type Globals = {
+    COLORS: d3.HSLColor[],
+    DEFAULT_WIDTH: number,
+    DEFAULT_HEIGHT: number,
+    TIP_X_EPS: number,
+  };
+  export const globals: Globals;
 }

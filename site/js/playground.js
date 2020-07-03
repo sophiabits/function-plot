@@ -77,3 +77,11 @@ functionPlot({
 //    fnType: 'implicit'
 //  }]
 //});
+
+// f(y) = ...
+// functionPlot({
+//   target: '#playground',
+//   data: [
+//     { fn: 'y-1', fnType: 'linearY', sampler: 'builtIn', graphType: 'polyline' }
+//   ]
+// });
