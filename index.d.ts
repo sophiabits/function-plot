@@ -35,6 +35,7 @@ declare module 'function-plot' {
     range?: Domain,
     // TODO: builtIn sampler is incompatible with 'interval' graph type
     sampler?: 'builtIn' | 'interval',
+    scope?: any,
     secants?: Secant[],
     /** If true, this data will not have a 'tip'. */
     skipTip?: boolean,
@@ -118,7 +119,7 @@ declare module 'function-plot' {
   export default functionPlot;
 
   type Globals = {
-    COLORS: d3.HSLColor[],
+    COLORS: string[],
     DEFAULT_WIDTH: number,
     DEFAULT_HEIGHT: number,
     TIP_X_EPS: number,
